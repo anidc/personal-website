@@ -57,9 +57,27 @@ function scrollToTop() {
     button.classList.add("hide")
 }
 
-function sendEmail(event) {
-    event.preventDefault()
-}
+document.querySelector(".contact-form").addEventListener("submit", (e) => {
+    e.preventDefault()
+    const email = document.querySelector("#email")
+    const companyName = document.querySelector("#name")
+    const textarea = document.querySelector("#message")
+
+    Email.send({
+        SecureToken: "b5d70d6c-f591-4246-b174-c70da8d61c96",
+        To: 'anidcamdzic@hotmail.com',
+        From: email.value,
+        Subject: `${companyName.value}`,
+        Body: textarea.value
+    }).then(
+        message => alert("Your message has been sent successfully!")
+    );
+
+    email.value = ""
+    companyName.value = ""
+    textarea.value = ""
+
+})
 
 
 function showMenu() {

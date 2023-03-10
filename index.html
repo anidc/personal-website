@@ -96,14 +96,14 @@
     </section>
     <section class="contact" id="contactid">
         <h1 class="section-title">Contact</h1>
-        <form action="" class="contact-form" onsubmit="submitForm(event)">
+        <form action="" class="contact-form">
             <div class="top-form">
                 <div class="left-form">
-                    <input required type="text" id="name" placeholder="Name or company name">
-                    <input required type="email" id="email" placeholder="Email">
+                    <input type="text" id="name" placeholder="Name or company name">
+                    <input type="email" id="email" placeholder="Email">
                 </div>
                 <div class="right-form">
-                    <textarea required name="textarea" id="message" rows="6" placeholder="Your text here..."></textarea>
+                    <textarea name="textarea" id="message" rows="6" placeholder="Your text here..."></textarea>
                 </div>
             </div>
             <button type="submit">Submit</button>
@@ -140,8 +140,8 @@
         </div>
     </footer>
     <button id="scroll-top" onclick="scrollToTop()">^</button>
-
     <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
