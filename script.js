@@ -4,7 +4,6 @@ function fetchData() {
     fetch(URL)
         .then(response => response.json())
         .then(data => {
-            console.log(data)
             data.map(repo => {
                 const card = document.createElement("div")
                 card.classList.add("github-card")
@@ -64,7 +63,7 @@ document.querySelector(".contact-form").addEventListener("submit", (e) => {
     const textarea = document.querySelector("#message")
 
     Email.send({
-        SecureToken: "b5d70d6c-f591-4246-b174-c70da8d61c96",
+        SecureToken: "e8dea0a7-8487-4bcd-ba53-f25e0a601981",
         To: 'anidcamdzic@hotmail.com',
         From: email.value,
         Subject: `${companyName.value}`,
