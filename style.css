@@ -333,6 +333,7 @@ section {
     transition: 0.3s ease-in-out;
     margin: 10px 0;
     font-size: 1rem;
+    border-radius: 0;
 }
 
 .left-form input:focus {
